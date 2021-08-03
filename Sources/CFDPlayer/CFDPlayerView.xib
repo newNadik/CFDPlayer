@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CFDPlayerView" customModule="CFDPlayerView" customModuleProvider="target">
+            <connections>
+                <outlet property="centerPlayButton" destination="8WZ-ta-KMF" id="yVi-G2-hkM"/>
+                <outlet property="contentView" destination="w7r-zv-BCC" id="sAw-tk-nhs"/>
+                <outlet property="coverImageView" destination="Sam-Pd-Ro3" id="2Xc-fO-h0n"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="277"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7r-zv-BCC">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="277"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sam-Pd-Ro3">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="277"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WZ-ta-KMF">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="277"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="play.circle" catalog="system">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
+                            </state>
+                            <connections>
+                                <action selector="centerPlayPressed" destination="-1" eventType="touchUpInside" id="q0o-Pf-Mu7"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="8WZ-ta-KMF" firstAttribute="top" secondItem="w7r-zv-BCC" secondAttribute="top" id="11m-wU-EBc"/>
+                        <constraint firstItem="Sam-Pd-Ro3" firstAttribute="top" secondItem="w7r-zv-BCC" secondAttribute="top" id="2nW-sx-nio"/>
+                        <constraint firstItem="Sam-Pd-Ro3" firstAttribute="leading" secondItem="w7r-zv-BCC" secondAttribute="leading" id="7Ba-D1-OBV"/>
+                        <constraint firstAttribute="trailing" secondItem="Sam-Pd-Ro3" secondAttribute="trailing" id="Hg8-RS-9oM"/>
+                        <constraint firstItem="8WZ-ta-KMF" firstAttribute="leading" secondItem="w7r-zv-BCC" secondAttribute="leading" id="Sa8-eG-t3B"/>
+                        <constraint firstItem="8WZ-ta-KMF" firstAttribute="centerX" secondItem="w7r-zv-BCC" secondAttribute="centerX" id="Wwd-i7-IUn"/>
+                        <constraint firstAttribute="bottom" secondItem="Sam-Pd-Ro3" secondAttribute="bottom" id="lqP-9i-GhJ"/>
+                        <constraint firstItem="8WZ-ta-KMF" firstAttribute="centerY" secondItem="w7r-zv-BCC" secondAttribute="centerY" id="xLE-14-PNB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="dz3-m0-Zh7"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="w7r-zv-BCC" secondAttribute="bottom" id="RCS-ZQ-Xcg"/>
+                <constraint firstItem="w7r-zv-BCC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="USt-mm-PzJ"/>
+                <constraint firstAttribute="trailing" secondItem="w7r-zv-BCC" secondAttribute="trailing" id="hYg-cC-rnP"/>
+                <constraint firstItem="w7r-zv-BCC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xxh-O3-1oj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-88.405797101449281" y="-103.45982142857143"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="play.circle" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
