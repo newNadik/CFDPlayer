@@ -20,8 +20,7 @@ extension CFDPlayerView {
     }
     
     func loadViewFromNib() -> UIView {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "CFDPlayerView", bundle: bundle)
+        let nib = UINib(nibName: "CFDPlayerView", bundle: Bundle.module)
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         return view
     }
