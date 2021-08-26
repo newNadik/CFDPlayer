@@ -46,7 +46,7 @@ public class CFDLandscapeWindow: UIWindow {
 extension CFDLandscapeWindow {
     private func setup() {
         self.rootViewController = WindowViewController()
-        self.backgroundColor = UIColor.clear
+        self.backgroundColor = UIColor.black
         self.windowLevel = UIWindow.Level.alert
     }
 
@@ -56,6 +56,7 @@ extension CFDLandscapeWindow {
             (self.rootViewController as? WindowViewController)?.isStatusHidden = false
             if let o = self.originalPlayView {                
                 UIView.animate(withDuration: 0.3, animations: {
+                    self.backgroundColor = UIColor.clear
                     self.rootViewController?.view.layer.transform = CATransform3DIdentity
                     self.rootViewController?.view.frame = o.superview?.convert(o.frame, to: self) ?? .zero
                     self.playerView.layoutSubviews()
@@ -79,6 +80,7 @@ extension CFDLandscapeWindow {
                 if !isLand {
                     let transform = CATransform3DRotate(CATransform3DIdentity, parameter*CGFloat.pi/2, 0, 0, 1)
                     self.rootViewController?.view.layer.transform = transform
+                    self.backgroundColor = UIColor.black
                 } else {
                     self.rootViewController?.view.layer.transform = CATransform3DIdentity
                 }
