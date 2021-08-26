@@ -24,6 +24,7 @@ public class CFDPlayerView: UIView {
         
     public func setCover(_ image: UIImage) {
         coverImageView.image = image
+        playerLayer.backgroundColor = UIColor.black.cgColor
     }
     
     lazy var controlsView: UIView & CFDPlayerControlsProtocol = {

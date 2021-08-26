@@ -78,7 +78,7 @@ extension CFDPlayerView {
     
     func showPlayerLayer() {
         self.bgView.layer.addSublayer(playerLayer)
-        playerLayer.backgroundColor = UIColor.black.cgColor
+        playerLayer.backgroundColor = UIColor.clear.cgColor
         self.playerContainer = self.contentView
         
         self.delayHideControls()
