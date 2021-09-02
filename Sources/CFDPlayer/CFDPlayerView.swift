@@ -46,6 +46,8 @@ public class CFDPlayerView: UIView {
         }
     }    
     
+    weak open var delegate: CFDPlayerDelegate?
+    
     public func seekTo(to time: CMTime, completionHandler: @escaping (Bool) -> Void) {
         self.playerLayer.player?.seek(to: time) { finish in
             self.controlsView.playerDidUpdateTime?(time: time.timeInterval ?? 0)

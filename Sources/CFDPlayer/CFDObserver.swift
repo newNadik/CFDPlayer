@@ -90,6 +90,7 @@ extension CFDPlayerView {
     }
     
     @objc func didFinishPlaying() {
+        delegate?.playerDidFinishPlaying(self)
         removePlayerLayer()
         centerPlayButton.isHidden = false
     }
