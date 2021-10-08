@@ -177,11 +177,14 @@ public class CFDPlayerView: UIView {
     
     public override func removeFromSuperview() {
         currentPlayer?.pause()
+        currentPlayer?.replaceCurrentItem(with: nil)
+        playerLayer.removeFromSuperlayer()
+        currentPlayer = nil
+        
         self.removeAllObserver()
         self.removePlayerObservers()
         self.removeCommandCenter()
         self.endAudioSession()
-        currentPlayer = nil
         super.removeFromSuperview()
     }
     
