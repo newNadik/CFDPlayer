@@ -106,8 +106,6 @@ public class CFDPlayerView: UIView {
     }
     lazy var bgView: UIView = {
         let v = UIView()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.frame = .zero
         v.backgroundColor = UIColor.clear
         return v
     }()

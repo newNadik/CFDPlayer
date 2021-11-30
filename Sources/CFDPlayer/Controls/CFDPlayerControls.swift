@@ -18,7 +18,11 @@ class CFDPlayerControls: UIView, CFDPlayerControlsProtocol {
     @IBOutlet weak var speedSelectionView: UIView!
     @IBOutlet weak var speedButton: UIButton!
     
-    var playLayer: CFDPlayerView?
+    var playLayer: CFDPlayerView? {
+        didSet {
+            self.playPauseButton?.isSelected = (playLayer?.currentPlayer?.rate ?? 0) > 0
+        }
+    }
     var isUpdateTime = false
     var isSpeedControlsShow = false
     
@@ -171,5 +175,4 @@ class CFDPlayerControls: UIView, CFDPlayerControlsProtocol {
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         return view
     }
-    
 }
