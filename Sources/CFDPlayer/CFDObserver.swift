@@ -92,7 +92,8 @@ extension CFDPlayerView {
     @objc func didFinishPlaying() {
         orientation = .protrait
         delegate?.playerDidFinishPlaying(self)
-        removePlayerLayer()
+        seekTo(to: CMTime.zero) { _ in }
+        showControls(isShow: false)
         centerPlayButton.isHidden = false
     }
     
